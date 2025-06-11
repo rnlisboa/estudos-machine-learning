@@ -1,6 +1,26 @@
 ## Problema Linearmente Separável (OPERADOR AND)
 
-### Explicação do Código do Perceptron de Uma Camada
+### Operador AND
+
+![Tabela operador AND](imagens/operador-e.png)
+
+### Modelo do perceptron
+
+![Perceptron](imagens/perceptron.png)
+
+### Passo a passo da aplicação da função soma e calculo da step function
+
+![Passo a passo da aplicação da função soma](imagens/passos-soma-perceptron.png)
+
+### Ajuste dos pesos
+
+![Ajustes](imagens/ajuste.png)
+
+### Passo a passo da aplicação da função soma e calculo da step function após o treinamento
+
+![Treinamento](imagens/passos-acerto.png)
+
+## Explicação do Código do Perceptron de Uma Camada
 
 ## Importação de Bibliotecas
 
