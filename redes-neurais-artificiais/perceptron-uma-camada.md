@@ -5,10 +5,6 @@
 ## Importação de Bibliotecas
 
 ```
-
-```
-
-```
 import tensorflow as tf
 import numpy as np
 ```
@@ -96,7 +92,7 @@ camada_saida_ativacao = step(camada_saida)
 Para cada valor resultante da multiplicação entre a entrada e seu peso, aplica a função degrau
 </p>
 
-## Cáluclo do Erro
+## Cálculo do Erro
 
 ```
 erro = tf.subtract(y, camada_saida_ativacao)
