@@ -24,14 +24,14 @@
 
 ## Importação de Bibliotecas
 
-```
+```python
 import tensorflow as tf
 import numpy as np
 ```
 
 ## Definição dos dados de entrada e saída (nesse caso, operação AND)
 
-```
+```python
 X = np.array([[0.0, 0.0],
              [0.0, 1.0],
              [1.0, 0.0],
@@ -46,7 +46,7 @@ y: Saídas esperadas correspondentes à operação AND (1 apenas quando ambas en
 
 ## Inicialização dos Pesos
 
-```
+```python
 qtd_linhas = 2
 qtd_colunas = 1
 w = tf.Variable(tf.zeros([qtd_linhas,qtd_colunas], dtype = tf.float64)) # pesos
@@ -66,7 +66,7 @@ No perceptron, cada peso é associado a cada entrada
 
 ## Cálculo da Camada de Saída
 
-```
+```python
 camada_saida = tf.matmul(X, w)
 
 [[0.]
@@ -81,7 +81,7 @@ Calcula a saída linear do perceptron (multiplicação matricial entre entradas 
 
 ## Função de Ativação
 
-```
+```python
 def step(x):
     return tf.cast(tf.to_float(tf.math.greater_equal(x, 1)), tf.float64)
 ```
@@ -99,7 +99,7 @@ O tf.cast garante que o resultado seja do tipo float64.
 
 ## Aplicação da Função de Ativação
 
-```
+```python
 camada_saida_ativacao = step(camada_saida)
 
 [[0.]
@@ -114,7 +114,7 @@ Para cada valor resultante da multiplicação entre a entrada e seu peso, aplica
 
 ## Cálculo do Erro
 
-```
+```python
 erro = tf.subtract(y, camada_saida_ativacao)
 ```
 
@@ -130,7 +130,7 @@ objetivo: chegar a 0 para todas as subtrações
 
 ## Atualização dos Pesos (Regra Delta)
 
-```
+```python
 delta = tf.matmul(X, erro, transpose_a = True)
 treinamento = tf.assign(w, tf.add(w, tf.multiply(delta, 0.1)))
 ```
@@ -146,7 +146,7 @@ w = w + η _ Xᵀ _ erro
 
 ## Treinamento do Perceptron
 
-```
+```python
 with tf.Session() as sess:
     sess.run(init)
     epoca = 0
