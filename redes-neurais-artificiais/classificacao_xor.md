@@ -37,11 +37,14 @@ neuronios_saida = 1
 ```
 
 A rede é composta por:
+
 - 2 neurônios na camada de entrada.
 - 3 neurônios na camada oculta.
 - 1 neurônio na camada de saída.
 
 ---
+
+![Perceptron](imagens/camada-oculta.png)
 
 ## 4. Inicialização dos Pesos e Bias
 
